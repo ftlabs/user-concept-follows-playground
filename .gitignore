@@ -4,3 +4,4 @@ data
 *.swp
 *.temp
 *.tmp
+.Rproj.user
