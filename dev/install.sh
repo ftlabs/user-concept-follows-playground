@@ -3,7 +3,7 @@ GIT_HOOK_DIR=../.git/hooks
 LOCAL_HOOK_DIR=./git-hooks
 LNS_RELATIVE_PATH=../../dev/git-hooks
 
-echo "Install project git hooks"
+echo "Installing project git hooks"
 
 for hook in $HOOK_NAMES; do
     if [ -f $LOCAL_HOOK_DIR/$hook ]; then
@@ -15,4 +15,5 @@ for hook in $HOOK_NAMES; do
       echo " > Enable project git hook"
       ln -s -f $LNS_RELATIVE_PATH/$hook $GIT_HOOK_DIR/$hook
     fi
+    echo "Complete"
 done
