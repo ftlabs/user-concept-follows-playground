@@ -1,0 +1,10 @@
+#!/bin/sh
+
+STAGED_CSV_FILES=$(git diff --cached --name-only | egrep ".csv$|.CSV$|.json$|.JSON$|.xlsx$|.XLSX$")
+
+if [[ "$STAGED_CSV_FILES" != "" ]]; then
+    echo "You have commited a data file that is not in the ./data folder. If you want to ignore this error please commit with --no-verify."
+    echo "The following files are effected:"
+    echo $STAGED_CSV_FILES
+    exit 1
+fi
