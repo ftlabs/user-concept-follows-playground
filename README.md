@@ -1,6 +1,6 @@
 # user-concept-follows-playground
 
-_IMPORTANT_
+*IMPORTANT*
 Before starting to work on this repository please run in root:
 
 ```
